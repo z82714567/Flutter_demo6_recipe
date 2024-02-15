@@ -15,12 +15,14 @@ class RecipePage extends StatelessWidget {
       appBar: _buildRecipeAppBar(),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        // 스크롤위젯
+        child: ListView(
           children: [
             RecipeTitle(),
             RecipeMenu(),
-            RecipeListItem(imageName: "coffee", title: "Make Coffee")
+            RecipeListItem(imageName: "coffee", title: "Make Coffee"),
+            RecipeListItem(imageName: "burger", title: "Make burger"),
+            RecipeListItem(imageName: "pizza", title: "Make pizza"),
           ],
         ),
       ),

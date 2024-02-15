@@ -16,9 +16,17 @@ class RecipeListItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            "assets/images/$imageName.jpeg",
-            fit: BoxFit.cover,
+          // 이미지 비율 정하기
+          AspectRatio(
+            aspectRatio: 2 / 1,
+            // 모서리 곡선 주기
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: Image.asset(
+                "assets/images/$imageName.jpeg",
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
           const SizedBox(height: 10),
           Text(
